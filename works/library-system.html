@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>図書貸出管理システム | ポートフォリオ</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <p class="site-title"><a href="../index.html">ポートフォリオ</a></p>
+      <nav>
+        <ul>
+          <li><a href="../index.html">トップ</a></li>
+          <li><a href="../works.html">作品一覧</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>図書貸出管理システム</h1>
+
+    <img src="../images/library-top.png" alt="図書貸出管理システムの書籍一覧および検索画面">
+
+    <section>
+      <h2>何のために作ったか</h2>
+      <p>図書委員が紙の台帳で管理していて、返却期限を過ぎた本が誰の手元にあるか分からない問題を解決するために作りました。</p>
+    </section>
+
+    <section>
+      <h2>自分の担当</h2>
+      <p>個人開発です。DB設計、PHPでのCRUD処理、貸出・返却トランザクション、検索機能の実装まで全工程を担当しました。</p>
+    </section>
+
+    <section>
+      <h2>一番詰まったところと解決法</h2>
+      <p>貸出処理で「貸出記録の作成」と「在庫数の減算」を同時に行う際、途中でエラーが起きるとデータが不整合になる点で詰まりました。PostgreSQLのトランザクション（beginTransaction / commit / rollBack）と Throwable での例外捕捉を組み合わせて解決しました。</p>
+    </section>
+
+    <section>
+      <h2>工夫したところ</h2>
+      <p>本の検索画面で「タイトル前方一致」と「著者完全一致」を切り替えられるようにし、複数著者の結合表示（STRING_AGG）にも対応しました。</p>
+    </section>
+
+    <section>
+      <h2>次に直すなら</h2>
+      <p>返却期限が過ぎている会員に対して、自動で督促メールを送信するバッチ機能を実装したいです。</p>
+    </section>
+
+    <section>
+      <h2>使った技術</h2>
+      <ul class="tech-list">
+        <li>PHP</li>
+        <li>PostgreSQL (Supabase)</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Git</li>
+        <li>GitHub</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>制作期間</h2>
+      <p>2026年（約3週間）</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; ポートフォリオ</p>
+  </footer>
+</body>
+</html>
